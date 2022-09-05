@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- Custom CSS Links  -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="img">
+    <div class="image">
+      <img src="1.jpg" alt="Sorry!" onclick="myfunction(this)">
+      <img src="2.jpg" alt="Sorry!" onclick="myfunction(this)">
+      <img src="3.jpg" alt="Sorry!" onclick="myfunction(this)">
+      <img src="4.jpg" alt="Sorry!" onclick="myfunction(this)">
+    </div>
+    <div class="full_image">
+      <img src="1.jpg" alt="Sorry!" id="full">
+    </div>
+  </div>
+  <script>
+    let myfunction = (small_img) => {
+      let full_img = document.getElementById("full").src;
+      full_img = small_img.src;
+      document.getElementById("full").src = full_img;
+    }
+  </script>
+</body>
+
+</html>
